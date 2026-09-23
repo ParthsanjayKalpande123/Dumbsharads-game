@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy Charades</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="label">Mini Arcade</p>
+          <h1>Dummy Charades</h1>
+        </div>
+        <div class="scoreboard">
+          <span>Score: <strong id="score">0</strong></span>
+          <span>Round: <strong id="round">1</strong></span>
+        </div>
+      </header>
+
+      <main class="game-panel">
+        <div class="word-box">
+          <p class="label">Scrambled Word</p>
+          <div id="scrambledWord" class="scrambled-word">loading...</div>
+        </div>
+
+        <div class="timer-box">
+          <p class="label">Time Left</p>
+          <div id="timer" class="timer">30</div>
+        </div>
+
+        <form id="guessForm" class="guess-form">
+          <input
+            id="guessInput"
+            type="text"
+            placeholder="Type your answer"
+            autocomplete="off"
+          />
+          <button type="submit">Guess</button>
+        </form>
+
+        <div class="message-row">
+          <p id="message" class="message">Press start to begin.</p>
+        </div>
+
+        <button id="startBtn" class="start-btn">Start Game</button>
+      </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
