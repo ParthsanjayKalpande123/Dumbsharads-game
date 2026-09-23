@@ -1,3 +1,4 @@
+# Flask app entry point for the Dumbsharads game
 from flask import Flask, render_template
 
 app = Flask(__name__)
